@@ -1,0 +1,808 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>H's personal website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="intro-done" class="state state--intro" aria-hidden="true" />
+    <input type="radio" name="resume-lang" id="lang-zh" class="state state--lang" checked />
+    <input type="radio" name="resume-lang" id="lang-en" class="state state--lang" />
+
+    <input type="radio" name="game-slide" id="game-0" class="state state--game" checked />
+    <input type="radio" name="game-slide" id="game-1" class="state state--game" />
+    <input type="radio" name="game-slide" id="game-2" class="state state--game" />
+    <input type="radio" name="game-slide" id="game-3" class="state state--game" />
+    <input type="radio" name="game-slide" id="game-4" class="state state--game" />
+    <input type="radio" name="game-slide" id="game-5" class="state state--game" />
+    <input type="radio" name="game-slide" id="game-6" class="state state--game" />
+
+    <input type="radio" name="work-slide" id="work-0" class="state state--work" checked />
+    <input type="radio" name="work-slide" id="work-1" class="state state--work" />
+    <input type="radio" name="work-slide" id="work-2" class="state state--work" />
+
+    <input type="radio" name="interest-slide" id="interest-0" class="state state--interest" checked />
+    <input type="radio" name="interest-slide" id="interest-1" class="state state--interest" />
+    <input type="radio" name="interest-slide" id="interest-2" class="state state--interest" />
+    <input type="radio" name="interest-slide" id="interest-3" class="state state--interest" />
+    <input type="radio" name="interest-slide" id="interest-4" class="state state--interest" />
+    <input type="radio" name="interest-slide" id="interest-5" class="state state--interest" />
+    <input type="radio" name="interest-slide" id="interest-6" class="state state--interest" />
+    <input type="radio" name="interest-slide" id="interest-7" class="state state--interest" />
+    <input type="radio" name="interest-slide" id="interest-8" class="state state--interest" />
+    <input type="radio" name="interest-slide" id="interest-9" class="state state--interest" />
+    <input type="radio" name="interest-slide" id="interest-10" class="state state--interest" />
+
+    <div class="page">
+      <header class="top-bar">
+        <nav class="top-nav" aria-label="目录导航">
+          <a href="#resume" class="nav-link">Resume</a>
+          <a href="#work-text" class="nav-link">work experience</a>
+          <a href="#interest" class="nav-link">interest</a>
+        </nav>
+        <div class="brand-mark" aria-hidden="true">
+          <img src="assets/头像.jpg" alt="" class="brand-avatar" width="48" height="48" />
+        </div>
+      </header>
+
+      <main class="page-sections">
+        <!-- Resume 模块 -->
+        <section id="resume" class="page-section resume-section" aria-labelledby="resume-heading">
+          <div class="section-inner resume-layout">
+            <div class="resume-text">
+              <h2 class="greeting">Hi there,<br><span class="greeting-indent">I am He Rujun</span></h2>
+              <div class="bio-detail">
+                <p>26届应届毕业生，管理学位，爱奇艺AI产品运营&amp;制造业猎头实习经验</p>
+                <p>1.AI工具使用方面熟练掌握dify工作流以及gemini、deepseek等主流模型的应用，了解cursor、Claude code的使用并用其制作了个人网页（本网页）</p>
+                <p>2.在爱奇艺实习时曾通过搭建工作流输出视频文案及分镜脚本，优化prompt等，并为业务使用撰写过线上工作流使用文档</p>
+                <p>3.在网易"逆水寒"游戏中创作过三个原创npc</p>
+                <p>4.猎头实习期间快速了解二轮车、新能源相关背景，短时间内独立寻找候选人</p>
+                <p>5.在校期间担任红十字会长期志愿者，推进"临终患者关怀计划"从0-1的实施；总共志愿时长312h+</p>
+              </div>
+            </div>
+            <div class="resume-right panel">
+              <div class="panel-head">
+                <h2 id="resume-heading" class="panel-title">简历</h2>
+                <div class="seg-switch resume-switch" role="group" aria-label="简历语言">
+                  <label class="seg-item" for="lang-zh">中文</label>
+                  <label class="seg-item" for="lang-en">EN</label>
+                </div>
+              </div>
+              <div class="resume-viewport">
+                <figure class="resume-sheet resume-zh">
+                  <div class="media-frame media-frame--resume">
+                    <img src="assets/resume-zh.png" alt="何茹君中文简历" loading="lazy" />
+                    <a href="#lb-rzh" class="media-zoom">放大查看</a>
+                  </div>
+                </figure>
+                <figure class="resume-sheet resume-en">
+                  <div class="media-frame media-frame--resume">
+                    <img src="assets/resume-en.png" alt="He Rujun English resume" loading="lazy" />
+                    <a href="#lb-ren" class="media-zoom">放大查看</a>
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 工作经验 文本模块 -->
+        <section id="work-text" class="page-section work-text-section" aria-labelledby="work-text-heading">
+          <div class="section-inner work-text-inner">
+            <h2 id="work-text-heading" class="work-text-title">工作经验</h2>
+            <p class="work-text-hint">点击标题查看代表性案例</p>
+            <hr class="work-title-sep">
+            <div class="work-grid">
+              <div class="work-card">
+                <h3 class="work-card-num">01  模型试验与评估</h3>
+                <div class="work-card-body">
+                  <p class="work-item"><span class="work-tag">【动漫】</span>多版本底层数据分析模型效果评估：对Gemini 2.5pro、3.0等多个大模型版本生成的动漫（如《大主宰》）底层数据（台词、场次、镜头、情节）进行评估，对比预设点位，判断模型通过率及主要问题。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【动漫】</span>全集数据评估：针对漫剧（如《凡人修仙传》动画）全集数据，评估人物识别一致性、台词说话人错误率、场次与情节划分准确性等。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【长剧】</span>《好东西》、《爱情神话》电影效果评估：系统性评估模型在电影长视频理解上的表现，包括台词说话人识别、场次/情节/镜头划分准确度、人物识别错误等维度。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【单集剧情简介】</span>模型测评：测试deepseekV3.1等不同模型，使用镜头、情节、场次三个维度的数据生成单集剧情简介，评估其内容准确性、完整性与人物名称准确度。</p>
+                </div>
+                <div class="work-card-case">
+                  <p class="case-label">代表性案例：动漫底层数据分析模型效果评估</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【背景】</span>针对动漫（如《大主宰》）底层数据分析，需要对多个大模型版本（Gemini 2.5pro、3.0等）生成的结构化数据进行系统性评估，验证模型对台词、场次、镜头、情节等维度的理解准确性。评估的核心目标是比较不同模型版本在同一批动漫内容上的表现差异，为模型选型和迭代提供数据支撑。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【过程】</span></p>
+                  <p class="work-item work-item--step">1. 设计评估体系，确定以"预设点位"为基准的对比评估方法，在动漫内容中预先标注关键场景、人物和情节节点作为标准答案；</p>
+                  <p class="work-item work-item--step">2. 对每个模型版本输出的底层数据进行逐项比对，包括台词与说话人匹配度、场次边界划分合理性、镜头切换点准确性、情节段落完整性等维度；</p>
+                  <p class="work-item work-item--step">3. 统计各模型版本在各项指标上的通过率，将错误类型归纳为"人物识别错误"、"场次漏分/错分"、"台词归属错误"等类别，量化各类问题的占比；</p>
+                  <p class="work-item work-item--step">4. 输出对比评估报告，明确各模型的优劣势和适用场景建议。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【成果】</span>输出了覆盖4个模型版本、3部动漫的横向对比评估报告，系统量化了各模型在动漫内容理解上的差异，其中Gemini 3.0在人物识别一致性上较2.5pro提升明显，但在长对话场景的说话人归属上仍有较高错误率。评估结果被用于指导后续模型版本的选择和优化方向。</p>
+                </div>
+              </div>
+              <div class="work-card">
+                <h3 class="work-card-num">02  问题排查与优化</h3>
+                <div class="work-card-body">
+                  <p class="work-item"><span class="work-tag">【检索】</span>Query检索不准确下钻排查：系统分析片段库检索失败的原因，将错误分类为"底层数据理解问题"、"检索策略问题"和"向量检索失败归因"，并量化了"只识别人物，未识别其他信息"等具体问题的占比。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【匹配】</span>解说词匹配画面不准确排查：定期根据业务反馈（MCN-缪斯），排查AI生成解说词与实际匹配画面不符的问题，定位问题来源（如底层数据错误、检索词不合理等）并提出优化方向。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【数据】</span>未上线介质内容理解问题排查：针对未播或正在播的内容（未上线介质）使用独立模型导致的内容理解偏差进行专项排查，发现主要问题是人物识别不准/不完全以及画面/剧情理解能力弱。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【质量】</span>分镜脚本剪跳帧问题定位：排查"分镜脚本剪"工具输出的视频出现跳帧的问题，通过分析工作流日志，定位到问题根源是原始视频切割本身出了错误，而非大模型后期编造。</p>
+                </div>
+                <div class="work-card-case">
+                  <p class="case-label">代表性案例：Query检索不准确下钻排查</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【背景】</span>在AI解说视频生成流程中，系统根据解说词生成检索Query，从片段库中匹配对应画面。业务方反馈部分解说词匹配到的画面与内容不相关或质量不佳，需要系统性地排查检索失败的根本原因，以提升画面匹配的准确率。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【过程】</span></p>
+                  <p class="work-item work-item--step">1. 收集近期检索失败的案例样本，覆盖不同类型的内容（动漫、长剧、电影）和不同的解说风格；</p>
+                  <p class="work-item work-item--step">2. 将检索失败案例逐条下钻分析，追溯到Query生成、向量检索、底层数据三个环节，将错误类型分为三类：底层数据理解问题（模型对内容理解错误，如人物、场景识别错误）、检索策略问题（Query关键词选取不当或权重设置不合理）、向量检索失败（语义匹配偏差）；</p>
+                  <p class="work-item work-item--step">3. 量化各类问题的占比，其中"底层数据只识别人物，未识别场景/动作/情绪等其他信息"这一细分类别占比最高，是导致检索失败的主要原因；</p>
+                  <p class="work-item work-item--step">4. 针对每类问题提出了对应的优化建议，包括优化底层数据的标注维度、改进Query生成策略、调整向量检索的相似度阈值等。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【成果】</span>输出了详细的检索失败归因分析报告，将零散的"匹配不准"反馈归纳为系统性的问题分类体系。报告被产品和技术团队采纳，"底层数据增加非人物维度标注"的建议被纳入后续模型迭代计划，后续检索准确率有显著提升。</p>
+                </div>
+              </div>
+              <div class="work-card">
+                <h3 class="work-card-num">03  工作流（dify）搭建与功能建设</h3>
+                <div class="work-card-body">
+                  <p class="work-item"><span class="work-tag">【功能增加】</span>为多个解说工作流增加"拆分分镜节点"：在"剧情向人物独白解说"、"爆文衍生解说"等工作流中，增加了自动将长解说稿拆分为分镜头脚本和画面描述的节点，并优化了相关Prompt，使画面描述更适合作为检索Query。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【功能优化】</span>"爆文衍生"解说工作流优化：优化了解说稿生成的Prompt，使其更紧扣爆文模板，并增加了"单集ID"和"核心角色"等输入字段，以提升画面匹配的精准度。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【工具集成】</span>新增"人工介入"节点：在"混剪转解说"等工作流中添加了人工介入节点，并为其适配了后续的"生成画面描述和字幕内容"流程，解决了人工调整分镜后无法自动生成后续内容的问题。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【流程打通】</span>未上线介质匹配增加"目标集"限制：修改了未上线介质相关的工作流，确保解说词匹配的画面必须来自指定的剧集ID（目标集），解决了跨剧集错误匹配的问题。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【新工具测试】</span>Agent三合一工具测评：测试了集成"意图分析+片段检索+花字生成"的新版Agent工具，重点评估了其利用人物关系图谱进行角色识别的准确性。</p>
+                </div>
+                <div class="work-card-case">
+                  <p class="case-label">代表性案例：【混剪转解说】工作流适配与优化</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【背景】</span>"混剪转解说"是面向MCN机构（缪斯）的核心工作流之一，用于将已有的混剪视频自动转化为带有AI解说的完整视频。业务方反馈工作流在以下场景存在问题：</p>
+                  <p class="work-item work-item--step">1）人工调整分镜后无法自动生成后续的解说内容；</p>
+                  <p class="work-item work-item--step">2）生成的画面描述与检索匹配度不高，导致画面与解说不同步；</p>
+                  <p class="work-item work-item--step">3）缺少对未上线介质内容的画面匹配限制，容易出现跨剧集错误匹配。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【过程】</span></p>
+                  <p class="work-item work-item--step">1. 分析现有工作流的节点链路，识别断裂点——人工介入节点之后缺少自动衔接"生成画面描述和字幕内容"的流程；</p>
+                  <p class="work-item work-item--step">2. 新增"人工介入"节点并适配后续流程，确保运营人员手动调整分镜后，系统能自动基于调整结果继续生成画面描述和字幕；</p>
+                  <p class="work-item work-item--step">3. 优化画面描述生成的Prompt，使其产出更适合作为检索Query的描述文本（增加场景、动作、情绪等维度的描述）；</p>
+                  <p class="work-item work-item--step">4. 为未上线介质工作流增加"目标集"限制参数，强制检索范围限定在指定剧集ID内；</p>
+                  <p class="work-item work-item--step">5. 增加"拆分分镜节点"，将长解说稿自动拆分并生成对应的画面描述，减少人工拆分的工作量。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【成果】</span>优化后的工作流实现了"混剪→人工介入→自动生成解说内容"的完整闭环，运营人员调整分镜后无需手动补写后续内容。画面匹配精准度明显提升，"目标集"限制彻底解决了跨剧集错误匹配的问题。该工作流后续成为缪斯平台解说生产的标准流程之一。</p>
+                </div>
+              </div>
+              <div class="work-card">
+                <h3 class="work-card-num">04  产品文档与协作</h3>
+                <div class="work-card-body">
+                  <p class="work-item"><span class="work-tag">【PRD撰写】</span>《解说字幕擦除OCR识别准确度提升》：根据业务反馈的"分镜脚本剪OCR识别"问题，撰写PRD文档，从问题定义、目标、需求描述到验收标准，系统地阐述了如何提升字幕擦除和OCR识别的准确性。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【操作手册】</span>撰写《缪斯Workflow空间手册-解说版》：编写了面向业务方和内部同事的操作手册，详细说明了如何将Dify工作流接入缪斯平台、进行管理和测试，降低了工具的使用门槛。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【问题闭环】</span>建立业务问题反馈与跟踪机制：通过"Dify工作流-问题反馈群"等渠道收集问题，定位问题（如查节点、对比日志），并在文档或群内进行回复，形成"反馈-排查-解决"的闭环。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【数据汇总】</span>每周汇总缪斯业务数据：定期从聊天记录和周报中提取种草、解说号等业务的关键数据（日播、环比等），填入汇总表格，并对数据波动进行归因分析。</p>
+                </div>
+                <div class="work-card-case">
+                  <p class="case-label">代表性案例：撰写PRD文档《解说字幕擦除OCR识别准确度提升》</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【背景】</span>业务方反馈"分镜脚本剪"工具在进行OCR识别时准确度不足，具体表现为：</p>
+                  <p class="work-item work-item--step">1）字幕区域识别不完整，部分字幕行被遗漏；</p>
+                  <p class="work-item work-item--step">2）字幕擦除后残留痕迹影响后续OCR识别；</p>
+                  <p class="work-item work-item--step">3）特殊字体（艺术字、手写体）的识别准确率明显低于常规字体。该问题直接影响了解说视频的自动生成质量，需要从产品层面系统性地推动优化。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【过程】</span></p>
+                  <p class="work-item work-item--step">1. 收集具体的问题案例，与业务方确认问题的表现形式、频率和影响范围；</p>
+                  <p class="work-item work-item--step">2. 撰写PRD文档，结构包括：问题定义（明确当前OCR识别在字幕擦除场景下的不足）、目标（量化准确度提升指标，如常规字体识别准确率≥98%、特殊字体≥90%）、需求描述（分功能需求和非功能需求详细阐述）、验收标准（定义各场景下的测试用例和通过条件）；</p>
+                  <p class="work-item work-item--step">3. 与算法和工程团队评审PRD，确保技术方案的可行性，并根据反馈调整需求细节；</p>
+                  <p class="work-item work-item--step">4. 推动PRD进入开发排期，并持续跟进开发进度和测试结果。</p>
+                  <hr class="work-sep">
+                  <p class="work-item"><span class="work-tag">【成果】</span>PRD文档获得产品和技术团队的认可，需求被纳入迭代计划。文档中提出的"分字体类型差异化处理"和"字幕擦除与OCR分离为独立模块"两个核心建议被采纳，为后续OCR识别准确度的系统性提升提供了清晰的产品方案和验收标准。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 项目图片 + 猎头经历 模块 -->
+        <section id="work-images" class="page-section work-images-section" aria-labelledby="work-images-heading">
+          <div class="section-inner work-images-layout">
+            <div class="work-images-text">
+              <div class="hunt-card">
+                <h3 class="hunt-num">01  猎头经历</h3>
+                <div class="hunt-body">
+                  <p><strong>人才寻访与筛选：</strong>根据岗位JD，独立在猎聘网等主流招聘平台进行目标人才寻访与初步甄选。解读岗位核心需求（如行业、职能、经验年限、关键技能、薪资范围等），制定关键词搜索策略，定位潜在候选人。</p>
+                  <p><strong>候选人初步接洽与意向沟通：</strong>主动通过平台消息/电话等方式与潜在候选人进行初步沟通。</p>
+                  <p><strong>信息传递：</strong>将筛选合格且有意向的候选人信息（简历、沟通摘要）清晰、及时地交付给顾问，为顾问的深度沟通和推荐打下基础。</p>
+                  <p><strong>量化工作量：</strong>平均每周（3天）主动接触40位潜在候选人，并完成初步意向沟通。提交给顾问的候选人信息中，30%获得顾问认可并进入深度沟通环节，2位进入面试环节。在入职两周内，能够独立高效地完成技术岗的初步寻访与筛选工作。快速掌握汽车/二轮车领域的基本术语和人才分布特点。在实习期间内接触过汽车行业的多个技术岗位以及国际采购、国际产品营销、流程管理（以上均为车企，包括一些新能源行业人才）和一家制造型企业的HRVP岗位。</p>
+                </div>
+              </div>
+              <div class="hunt-card">
+                <h3 class="hunt-num">02  原创AI npc：如图</h3>
+              </div>
+              <div class="hunt-card">
+                <h3 class="hunt-num">03  个人评价</h3>
+                <div class="hunt-body">
+                  <p>语言：英语四六级，普通话二甲</p>
+                  <p>技能：Excel、Word、PPT、飞书app；基础剪辑技巧；cursor、VScode等</p>
+                  <p>有责任心、善于团队合作、喜欢尝试新鲜事物、接受出差</p>
+                </div>
+              </div>
+            </div>
+            <div class="work-images-right panel">
+              <div class="panel-head">
+                <h2 id="work-images-heading" class="panel-title">项目图片</h2>
+                <div class="work-dots" aria-hidden="true">
+                  <label for="work-0" class="work-dot wd0"></label>
+                  <label for="work-1" class="work-dot wd1"></label>
+                  <label for="work-2" class="work-dot wd2"></label>
+                </div>
+              </div>
+              <div class="work-stage-outer">
+                <div class="work-stage">
+                  <div class="work-track">
+                    <figure class="work-slide">
+                      <div class="media-frame">
+                        <img src="assets/work-1.jpg" alt="工作相关图片 1" loading="lazy" />
+                        <a href="#lb-w0" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="work-slide">
+                      <div class="media-frame">
+                        <img src="assets/work-2.jpg" alt="工作相关图片 2" loading="lazy" />
+                        <a href="#lb-w1" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="work-slide">
+                      <div class="media-frame">
+                        <img src="assets/work-3.jpg" alt="工作相关图片 3" loading="lazy" />
+                        <a href="#lb-w2" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="work-arrows">
+                    <label for="work-2" class="arrow arrow-prev when-w0" aria-label="上一张"></label>
+                    <label for="work-0" class="arrow arrow-prev when-w1" aria-label="上一张"></label>
+                    <label for="work-1" class="arrow arrow-prev when-w2" aria-label="上一张"></label>
+                    <label for="work-1" class="arrow arrow-next when-w0" aria-label="下一张"></label>
+                    <label for="work-2" class="arrow arrow-next when-w1" aria-label="下一张"></label>
+                    <label for="work-0" class="arrow arrow-next when-w2" aria-label="下一张"></label>
+                  </div>
+                </div>
+              </div>
+              <nav class="social-row social-row--work" aria-label="工作文档">
+                <a class="social-link work" href="https://tcnxsauzgwbo.feishu.cn/wiki/JGoXwPSjai9PpSkHaiCcdH2ynnc?from=from_copylink" target="_blank" rel="noopener noreferrer">工作文档</a>
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        <!-- Interest 模块：个人兴趣 + 图片轮播 -->
+        <section id="interest" class="page-section interest-section" aria-labelledby="interest-heading">
+          <h2 id="interest-heading" class="interest-page-title">My Little World</h2>
+          <div class="section-inner interest-layout">
+            <div class="interest-text">
+              <p>✈️ 已飞 0 国 | 🙋🏻‍♀️ 中中混血｜华籍华人</p>
+              <p>👜 TB 资深买手｜🍰 甜品挖掘机｜🛌 赖床大赛冠军</p>
+              <p>👩🏻‍🎓 清华北大没考 | 雅思托福没考｜2006年时代周刊全球年度人物｜2008年感动中国特别奖</p>
+              <p>🏄🏻‍♀️ Internet 冲浪达人 | 🫦 互联网嘴替</p>
+              <p>👑 乙女游戏资深玩家｜🎮 被王者荣耀驯服者｜大世界游戏单机剧情党</p>
+              <p>📚 文学阅读者｜🎞️ 电影鉴赏官｜📍 旅游爱好者（没去过多少地方版）｜🎹 十级业余钢琴家</p>
+              <p class="interest-quote">"无忧之人皆愚钝，莫思莫慧莫王侯"</p>
+            </div>
+            <div class="interest-right panel">
+              <div class="panel-head">
+                <h2 class="panel-title">interests</h2>
+                <div class="interest-dots" aria-hidden="true">
+                  <label for="interest-0" class="interest-dot id0"></label>
+                  <label for="interest-1" class="interest-dot id1"></label>
+                  <label for="interest-2" class="interest-dot id2"></label>
+                  <label for="interest-3" class="interest-dot id3"></label>
+                  <label for="interest-4" class="interest-dot id4"></label>
+                  <label for="interest-5" class="interest-dot id5"></label>
+                  <label for="interest-6" class="interest-dot id6"></label>
+                  <label for="interest-7" class="interest-dot id7"></label>
+                  <label for="interest-8" class="interest-dot id8"></label>
+                  <label for="interest-9" class="interest-dot id9"></label>
+                  <label for="interest-10" class="interest-dot id10"></label>
+                </div>
+              </div>
+              <div class="interest-stage-outer">
+                <div class="interest-stage">
+                  <div class="interest-track">
+                    <figure class="interest-slide">
+                      <div class="media-frame">
+                        <img src="assets/game-01.jpg" alt="游戏截图 1" loading="lazy" />
+                        <a href="#lb-g0" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="interest-slide">
+                      <div class="media-frame">
+                        <img src="assets/game-02.jpg" alt="游戏截图 2" loading="lazy" />
+                        <a href="#lb-g1" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="interest-slide">
+                      <div class="media-frame">
+                        <img src="assets/game-03.jpg" alt="游戏截图 3" loading="lazy" />
+                        <a href="#lb-g2" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="interest-slide">
+                      <div class="media-frame">
+                        <img src="assets/game-04.jpg" alt="游戏截图 4" loading="lazy" />
+                        <a href="#lb-g3" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="interest-slide">
+                      <div class="media-frame">
+                        <img src="assets/game-05.jpg" alt="游戏截图 5" loading="lazy" />
+                        <a href="#lb-g4" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="interest-slide">
+                      <div class="media-frame">
+                        <img src="assets/game-06.jpg" alt="游戏截图 6" loading="lazy" />
+                        <a href="#lb-g5" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="interest-slide">
+                      <div class="media-frame">
+                        <img src="assets/game-07.jpg" alt="游戏截图 7" loading="lazy" />
+                        <a href="#lb-g6" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="interest-slide">
+                      <div class="media-frame">
+                        <img src="assets/book.jpg" alt="书籍" loading="lazy" />
+                        <a href="#lb-int0" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="interest-slide">
+                      <div class="media-frame">
+                        <img src="assets/movie.jpg" alt="电影" loading="lazy" />
+                        <a href="#lb-int1" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="interest-slide">
+                      <div class="media-frame">
+                        <img src="assets/travel.jpg" alt="旅行" loading="lazy" />
+                        <a href="#lb-int2" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                    <figure class="interest-slide">
+                      <div class="media-frame">
+                        <img src="assets/piano.jpg" alt="钢琴" loading="lazy" />
+                        <a href="#lb-int3" class="media-zoom">放大查看</a>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="interest-arrows">
+                    <label for="interest-10" class="arrow arrow-prev when-i0" aria-label="上一张"></label>
+                    <label for="interest-0" class="arrow arrow-prev when-i1" aria-label="上一张"></label>
+                    <label for="interest-1" class="arrow arrow-prev when-i2" aria-label="上一张"></label>
+                    <label for="interest-2" class="arrow arrow-prev when-i3" aria-label="上一张"></label>
+                    <label for="interest-3" class="arrow arrow-prev when-i4" aria-label="上一张"></label>
+                    <label for="interest-4" class="arrow arrow-prev when-i5" aria-label="上一张"></label>
+                    <label for="interest-5" class="arrow arrow-prev when-i6" aria-label="上一张"></label>
+                    <label for="interest-6" class="arrow arrow-prev when-i7" aria-label="上一张"></label>
+                    <label for="interest-7" class="arrow arrow-prev when-i8" aria-label="上一张"></label>
+                    <label for="interest-8" class="arrow arrow-prev when-i9" aria-label="上一张"></label>
+                    <label for="interest-9" class="arrow arrow-prev when-i10" aria-label="上一张"></label>
+                    <label for="interest-1" class="arrow arrow-next when-i0" aria-label="下一张"></label>
+                    <label for="interest-2" class="arrow arrow-next when-i1" aria-label="下一张"></label>
+                    <label for="interest-3" class="arrow arrow-next when-i2" aria-label="下一张"></label>
+                    <label for="interest-4" class="arrow arrow-next when-i3" aria-label="下一张"></label>
+                    <label for="interest-5" class="arrow arrow-next when-i4" aria-label="下一张"></label>
+                    <label for="interest-6" class="arrow arrow-next when-i5" aria-label="下一张"></label>
+                    <label for="interest-7" class="arrow arrow-next when-i6" aria-label="下一张"></label>
+                    <label for="interest-8" class="arrow arrow-next when-i7" aria-label="下一张"></label>
+                    <label for="interest-9" class="arrow arrow-next when-i8" aria-label="下一张"></label>
+                    <label for="interest-10" class="arrow arrow-next when-i9" aria-label="下一张"></label>
+                    <label for="interest-0" class="arrow arrow-next when-i10" aria-label="下一张"></label>
+                  </div>
+                </div>
+              </div>
+              <nav class="social-row social-row--interest" aria-label="社交链接">
+                <a class="social-link xhs" href="https://xhslink.com/m/1DbsDsxa5p3" target="_blank" rel="noopener noreferrer">小红书</a>
+                <a class="social-link dy" href="https://v.douyin.com/bTAWgIiZ6dc/" target="_blank" rel="noopener noreferrer">抖音</a>
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        <!-- 互动模块：玫瑰花 + 留言 -->
+        <section id="interact" class="page-section interact-section" aria-labelledby="interact-heading">
+          <div class="section-inner interact-inner">
+            <h2 id="interact-heading" class="interact-heading">Say Something</h2>
+            <div class="interact-row">
+              <div class="rose-module">
+                <button class="rose-btn" title="送一朵玫瑰花" aria-label="送玫瑰花">
+                  <span class="rose-icon">🌹</span>
+                </button>
+                <span class="rose-count">0</span>
+                <span class="rose-label">朵玫瑰花</span>
+                <div class="rose-fly-stage" aria-hidden="true"></div>
+              </div>
+              <div class="comment-module">
+                <textarea class="comment-input" placeholder="留下你想说的话…" rows="3" maxlength="500"></textarea>
+                <button class="comment-submit">发送留言</button>
+                <p class="comment-hint">你的留言仅网页拥有者可见</p>
+                <div class="comment-admin" style="display:none">
+                  <hr class="comment-admin-sep">
+                  <div class="comment-list"></div>
+                </div>
+              </div>
+            </div>
+            <a class="admin-toggle" href="javascript:void(0)" title="管理员" aria-label="管理员入口">🔒</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>H's personal website</p>
+      </footer>
+    </div>
+
+    <!-- 开屏：推开大门 -->
+    <div class="intro-layer">
+      <label class="intro-hit" for="intro-done" title="点击开门进入">
+        <span class="sr-only">打开个人网站</span>
+        <div class="door-scene">
+          <div class="door-text door-text--left">
+            <h2 class="door-title">欢迎来到<br>H's个人作品集</h2>
+          </div>
+          <div class="door-frame">
+            <div class="door-backdrop" aria-hidden="true">
+              <div class="door-glow"></div>
+            </div>
+            <div class="door-leaf door-leaf--left">
+              <img src="assets/door.jpg" alt="" class="door-img door-img--left" />
+              <div class="door-tint"></div>
+              <div class="door-inside"></div>
+            </div>
+            <div class="door-leaf door-leaf--right">
+              <img src="assets/door.jpg" alt="" class="door-img door-img--right" />
+              <div class="door-tint"></div>
+              <div class="door-inside"></div>
+            </div>
+          </div>
+          <div class="door-text door-text--right">
+            <p class="door-sub">点击进入</p>
+          </div>
+        </div>
+      </label>
+    </div>
+
+    <!-- :target 灯箱 -->
+    <div id="lb-rzh" class="lightbox" role="dialog" aria-modal="true" aria-label="简历预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/resume-zh.png" alt="何茹君中文简历（完整）" />
+      </div>
+    </div>
+    <div id="lb-ren" class="lightbox" role="dialog" aria-modal="true" aria-label="简历预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/resume-en.png" alt="English resume（full）" />
+      </div>
+    </div>
+    <div id="lb-g0" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/game-01.jpg" alt="游戏截图 1（完整）" />
+      </div>
+    </div>
+    <div id="lb-g1" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/game-02.jpg" alt="游戏截图 2（完整）" />
+      </div>
+    </div>
+    <div id="lb-g2" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/game-03.jpg" alt="游戏截图 3（完整）" />
+      </div>
+    </div>
+    <div id="lb-g3" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/game-04.jpg" alt="游戏截图 4（完整）" />
+      </div>
+    </div>
+    <div id="lb-g4" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/game-05.jpg" alt="游戏截图 5（完整）" />
+      </div>
+    </div>
+    <div id="lb-g5" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/game-06.jpg" alt="游戏截图 6（完整）" />
+      </div>
+    </div>
+    <div id="lb-g6" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/game-07.jpg" alt="游戏截图 7（完整）" />
+      </div>
+    </div>
+    <div id="lb-w0" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/work-1.jpg" alt="工作相关图片 1（完整）" />
+      </div>
+    </div>
+    <div id="lb-w1" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/work-2.jpg" alt="工作相关图片 2（完整）" />
+      </div>
+    </div>
+    <div id="lb-w2" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/work-3.jpg" alt="工作相关图片 3（完整）" />
+      </div>
+    </div>
+    <div id="lb-int0" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/book.jpg" alt="书籍（完整）" />
+      </div>
+    </div>
+    <div id="lb-int1" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/movie.jpg" alt="电影（完整）" />
+      </div>
+    </div>
+    <div id="lb-int2" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/travel.jpg" alt="旅行（完整）" />
+      </div>
+    </div>
+    <div id="lb-int3" class="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
+      <a href="#" class="lightbox__scrim" aria-label="关闭"></a>
+      <div class="lightbox__content">
+        <a href="#" class="lightbox__close" aria-label="关闭">×</a>
+        <img src="assets/piano.jpg" alt="钢琴（完整）" />
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        function classifyImage(img) {
+          if (img.naturalHeight > img.naturalWidth) {
+            img.classList.add('portrait');
+          } else {
+            img.classList.add('landscape');
+          }
+        }
+
+        document.querySelectorAll('.media-frame img').forEach(function (img) {
+          if (img.complete) {
+            classifyImage(img);
+          } else {
+            img.addEventListener('load', function () {
+              classifyImage(img);
+            });
+          }
+        });
+
+        /* 工作经验：点击标题切换案例详情 */
+        document.querySelectorAll('.work-card-num').forEach(function (title) {
+          title.addEventListener('click', function () {
+            title.parentElement.classList.toggle('is-flipped');
+          });
+        });
+
+        /* 灯箱关闭时不滚回顶部 */
+        document.querySelectorAll('.lightbox a[href="#"]').forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.hash = '_c';
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+          });
+        });
+
+        /* ====== 互动模块 ====== */
+        var STORAGE_KEY = 'h_website_data';
+        var ADMIN_PASSWORD = 'hrj2024';
+
+        function loadData() {
+          try {
+            return JSON.parse(localStorage.getItem(STORAGE_KEY)) || { roses: 0, comments: [] };
+          } catch (e) {
+            return { roses: 0, comments: [] };
+          }
+        }
+
+        function saveData(data) {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        }
+
+        var data = loadData();
+
+        /* 玫瑰计数 */
+        var roseCountEl = document.querySelector('.rose-count');
+        var roseStage = document.querySelector('.rose-fly-stage');
+        var roseBtn = document.querySelector('.rose-btn');
+
+        if (roseCountEl) roseCountEl.textContent = data.roses;
+
+        if (roseBtn) {
+          roseBtn.addEventListener('click', function () {
+            data.roses++;
+            saveData(data);
+            roseCountEl.textContent = data.roses;
+
+            /* 飞出动画 */
+            var fly = document.createElement('span');
+            fly.className = 'rose-fly';
+            fly.textContent = '🌹';
+            fly.style.setProperty('--drift', (Math.random() * 80 - 40) + 'px');
+            fly.style.setProperty('--spin', (Math.random() * 60 - 30) + 'deg');
+            roseStage.appendChild(fly);
+            fly.addEventListener('animationend', function () {
+              fly.remove();
+            });
+          });
+        }
+
+        /* 留言 */
+        var commentInput = document.querySelector('.comment-input');
+        var commentSubmit = document.querySelector('.comment-submit');
+        var commentList = document.querySelector('.comment-list');
+
+        function renderComments() {
+          if (!commentList) return;
+          commentList.innerHTML = '';
+          if (data.comments.length === 0) {
+            commentList.innerHTML = '<p class="comment-empty">暂无留言</p>';
+            return;
+          }
+          for (var i = data.comments.length - 1; i >= 0; i--) {
+            var c = data.comments[i];
+            var item = document.createElement('div');
+            item.className = 'comment-item';
+            var time = new Date(c.time);
+            var timeStr = time.getFullYear() + '-' +
+              String(time.getMonth() + 1).padStart(2, '0') + '-' +
+              String(time.getDate()).padStart(2, '0') + ' ' +
+              String(time.getHours()).padStart(2, '0') + ':' +
+              String(time.getMinutes()).padStart(2, '0');
+            item.innerHTML =
+              '<p class="comment-item-text">' + escapeHtml(c.text) + '</p>' +
+              '<p class="comment-item-time">' + timeStr + '</p>';
+            commentList.appendChild(item);
+          }
+        }
+
+        function escapeHtml(str) {
+          var div = document.createElement('div');
+          div.textContent = str;
+          return div.innerHTML;
+        }
+
+        function showToast(msg) {
+          var toast = document.createElement('div');
+          toast.className = 'comment-toast';
+          toast.textContent = msg;
+          document.body.appendChild(toast);
+          toast.addEventListener('animationend', function (e) {
+            if (e.animationName === 'toastOut') toast.remove();
+          });
+        }
+
+        if (commentSubmit) {
+          commentSubmit.addEventListener('click', function () {
+            var text = commentInput.value.trim();
+            if (!text) {
+              showToast('请输入留言内容');
+              return;
+            }
+            data.comments.push({ text: text, time: Date.now() });
+            saveData(data);
+            commentInput.value = '';
+            showToast('留言已发送，仅网页拥有者可见');
+            renderComments();
+          });
+        }
+
+        /* 管理员入口 */
+        var adminToggle = document.querySelector('.admin-toggle');
+        var commentAdmin = document.querySelector('.comment-admin');
+        var isAdmin = false;
+
+        function showAdminModal() {
+          var modal = document.createElement('div');
+          modal.className = 'admin-modal';
+          modal.innerHTML =
+            '<div class="admin-modal-box">' +
+            '<p>请输入管理员密码</p>' +
+            '<input type="password" class="admin-pw-input" placeholder="密码" autofocus>' +
+            '<div class="admin-modal-actions">' +
+            '<button class="btn-cancel">取消</button>' +
+            '<button class="btn-confirm">确认</button>' +
+            '</div></div>';
+          document.body.appendChild(modal);
+
+          var input = modal.querySelector('.admin-pw-input');
+          var btnCancel = modal.querySelector('.btn-cancel');
+          var btnConfirm = modal.querySelector('.btn-confirm');
+
+          function close() { modal.remove(); }
+
+          btnCancel.addEventListener('click', close);
+          modal.addEventListener('click', function (e) {
+            if (e.target === modal) close();
+          });
+
+          btnConfirm.addEventListener('click', function () {
+            if (input.value === ADMIN_PASSWORD) {
+              isAdmin = true;
+              adminToggle.classList.add('is-active');
+              adminToggle.textContent = '🔓';
+              commentAdmin.style.display = 'block';
+              renderComments();
+              close();
+            } else {
+              showToast('密码错误');
+              close();
+            }
+          });
+
+          input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') btnConfirm.click();
+            if (e.key === 'Escape') close();
+          });
+
+          setTimeout(function () { input.focus(); }, 100);
+        }
+
+        function exitAdmin() {
+          isAdmin = false;
+          adminToggle.classList.remove('is-active');
+          adminToggle.textContent = '🔒';
+          commentAdmin.style.display = 'none';
+        }
+
+        if (adminToggle) {
+          adminToggle.addEventListener('click', function () {
+            if (isAdmin) {
+              exitAdmin();
+            } else {
+              showAdminModal();
+            }
+          });
+        }
+
+        /* 初始渲染已有留言 */
+        renderComments();
+      });
+    </script>
+  </body>
+</html>
