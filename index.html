@@ -450,7 +450,7 @@
 
     <!-- 开屏：推开大门 -->
     <div class="intro-layer">
-      <label class="intro-hit" for="intro-done" title="点击开门进入">
+      <div class="intro-hit" id="intro-hit" title="点击开门进入">
         <span class="sr-only">打开个人网站</span>
         <div class="door-scene">
           <div class="door-text door-text--left">
@@ -475,7 +475,17 @@
             <p class="door-sub">点击进入</p>
           </div>
         </div>
-      </label>
+      </div>
+      <div class="pw-dialog" id="pw-dialog" style="display:none">
+        <div class="pw-dialog-box">
+          <p class="pw-dialog-title">请输入访问密码</p>
+          <input type="password" class="pw-input" id="pw-input" placeholder="输入密码" autocomplete="off">
+          <p class="pw-error" id="pw-error" style="display:none">密码错误，请重试</p>
+          <div class="pw-dialog-actions">
+            <button class="pw-btn pw-btn--confirm" id="pw-confirm">进入</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- :target 灯箱 -->
@@ -594,6 +604,69 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
+        /* ====== 开门密码保护 ====== */
+        (function () {
+          var prevRole = sessionStorage.getItem('h_site_role');
+          if (prevRole === 'role-friends') {
+            document.body.classList.add('role-friends');
+          }
+
+          var introHit = document.getElementById('intro-hit');
+          var pwDialog = document.getElementById('pw-dialog');
+          var pwInput = document.getElementById('pw-input');
+          var pwError = document.getElementById('pw-error');
+          var pwConfirm = document.getElementById('pw-confirm');
+
+          function showPwDialog() {
+            pwDialog.style.display = 'grid';
+            pwInput.value = '';
+            pwError.style.display = 'none';
+            setTimeout(function () { pwInput.focus(); }, 150);
+          }
+
+          function hidePwDialog() {
+            pwDialog.style.display = 'none';
+          }
+
+          function openDoor(roleClass) {
+            document.body.classList.remove('role-friends', 'role-public');
+            if (roleClass) document.body.classList.add(roleClass);
+            sessionStorage.setItem('h_site_role', roleClass || '');
+            hidePwDialog();
+            document.getElementById('intro-done').checked = true;
+          }
+
+          function handlePassword() {
+            var pw = pwInput.value.trim();
+            if (pw === 'friends') {
+              openDoor('role-friends');
+            } else if (pw === 'public') {
+              openDoor('role-public');
+            } else {
+              pwError.style.display = 'block';
+              pwInput.value = '';
+              pwInput.focus();
+            }
+          }
+
+          if (introHit) {
+            introHit.addEventListener('click', function () {
+              showPwDialog();
+            });
+          }
+
+          if (pwConfirm) {
+            pwConfirm.addEventListener('click', handlePassword);
+          }
+
+          if (pwInput) {
+            pwInput.addEventListener('keydown', function (e) {
+              if (e.key === 'Enter') handlePassword();
+              if (e.key === 'Escape') hidePwDialog();
+            });
+          }
+        })();
+
         function classifyImage(img) {
           if (img.naturalHeight > img.naturalWidth) {
             img.classList.add('portrait');

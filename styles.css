@@ -111,6 +111,73 @@ body:has(.lightbox:target) {
   pointer-events: none;
 }
 
+/* 密码输入弹窗 */
+.pw-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  display: grid;
+  place-items: center;
+  background: rgba(30, 20, 50, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.pw-dialog-box {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 20px;
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(44, 36, 60, 0.2);
+  max-width: 360px;
+  width: 90%;
+}
+
+.pw-dialog-title {
+  font-family: var(--font-lishu);
+  font-size: 1.3rem;
+  color: #3a2f52;
+  margin: 0 0 1.2rem;
+}
+
+.pw-input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid rgba(92, 72, 120, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.pw-input:focus {
+  border-color: var(--accent);
+}
+
+.pw-error {
+  color: #d44;
+  font-size: 0.85rem;
+  margin: 0.6rem 0 0;
+}
+
+.pw-btn {
+  margin-top: 1.2rem;
+  padding: 0.65rem 2.5rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pw-btn:hover {
+  background: #6a4f9a;
+}
+
 /* 大门场景 —— 3D 透视舞台，横向布局：标题 | 门 | 副标题 */
 .door-scene {
   perspective: 1500px;
@@ -582,6 +649,19 @@ body:has(.lightbox:target) {
 
 .work-card.is-flipped .work-card-case {
   display: flex;
+}
+
+/* friends 模式：工作经验内容模糊 */
+.role-friends .work-card-body,
+.role-friends .work-card-case {
+  filter: blur(6px);
+  opacity: 0.25;
+  pointer-events: none;
+  user-select: none;
+}
+
+.role-friends .work-text-hint {
+  display: none;
 }
 
 .case-label {
