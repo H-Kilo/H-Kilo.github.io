@@ -1128,16 +1128,15 @@ body:has(.lightbox:target) {
   align-items: start;
 }
 
-/* 页面标题 —— 右上角华文隶书 */
+/* 页面标题 —— 左侧华文隶书 */
 .interest-page-title {
-  text-align: right;
+  text-align: left;
   margin: 0 0 0.75rem;
   font-family: var(--font-lishu);
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: normal;
   color: #3a2f52;
   letter-spacing: 0.06em;
-  padding-right: 0.5rem;
 }
 
 /* 左侧兴趣文字 —— 楷体小三号 */
