@@ -651,9 +651,10 @@ body:has(.lightbox:target) {
   display: flex;
 }
 
-/* friends 模式：工作经验内容模糊 */
+/* friends 模式：工作经验内容 + 简历图片模糊 */
 .role-friends .work-card-body,
-.role-friends .work-card-case {
+.role-friends .work-card-case,
+.role-friends .resume-viewport {
   filter: blur(6px);
   opacity: 0.25;
   pointer-events: none;
